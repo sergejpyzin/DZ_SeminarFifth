@@ -12,7 +12,10 @@
             }
             return array;
         }
-
+        static void PrintArray(int[] array)
+        {
+            Console.WriteLine($"[ {string.Join(", ", array)} ]");
+        }
         static int GetEventNumber(int[] array)
         {
             int result = 0;
@@ -28,7 +31,7 @@
         static void Main(string[] args)
         {
             int[] myArray = GetRandomArray(10, 100, 999);
-            Console.WriteLine($"[ {string.Join(", ", myArray)} ]");
+            PrintArray(myArray);
             int eventNumber = GetEventNumber(myArray);
             Console.WriteLine($"Количество четных чисел в массиве: {eventNumber}");
         }
