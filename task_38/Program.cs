@@ -23,6 +23,10 @@
             }
             return array;
         }
+        static void PrintArray(double[] array)
+        {
+            Console.WriteLine($"[ {string.Join(", ", array)} ]");
+        }
         static (double, double)GetMaxMinElement(double[] array)
         {
             double maxElement = array[0];
@@ -33,11 +37,6 @@
                 else if (array[i] < minElement) minElement = array[i];
             }
             return (minElement, maxElement);
-        }
-
-        static void PrintArray(double[] array)
-        {
-            Console.WriteLine($"[ {string.Join(", ", array)} ]");
         }
 
 
