@@ -14,6 +14,10 @@ namespace task_36
             }
             return array;
         }
+        static void PrintArray(int[] array)
+        {
+            Console.WriteLine($"[ {string.Join (", ", array)} ]");
+        }
         static int GetSumUnfairPosition(int[] array)
         {
             int result = 0;
@@ -46,7 +50,7 @@ namespace task_36
             int leftBoard = GetConvertUserMassedge($"Введите минимальную границу массива: ");
             int rightBoard = GetConvertUserMassedge($"Введите максимальную границу массив: ");
             int[] myArray = GetRandomArray(length, leftBoard, rightBoard);
-            Console.WriteLine($"[ {string.Join(", ", myArray)} ]");
+            PrintArray(myArray);
             int sum = GetSumUnfairPosition(myArray);
             Console.WriteLine($"Сумма элементов массива на нечетных позициях: {sum}");
         }
